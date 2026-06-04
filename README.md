@@ -226,29 +226,25 @@ The project follows this sequence:
 ### Prerequisites
 
 - Python 3.8 or higher
-- pip or conda package manager
+- pip package manager
 
 ### Required Libraries
+
+Install all dependencies using the provided `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or install individually:
+This installs:
+- **pandas** - Data manipulation and analysis
+- **duckdb** - In-process SQL OLAP database
+- **matplotlib** - Data visualization and plotting
 
-```bash
-pip install duckdb pandas numpy jupyter matplotlib seaborn
-```
-
-Using conda:
-
-```bash
-conda install -c conda-forge duckdb pandas numpy jupyter matplotlib seaborn
-```
-
-### DuckDB Installation
-
-DuckDB is included in the pip/conda dependencies above. For more information, visit [DuckDB documentation](https://duckdb.org/docs/).
+For more information on these libraries, visit their official documentation:
+- [pandas documentation](https://pandas.pydata.org/docs/)
+- [DuckDB documentation](https://duckdb.org/docs/)
+- [matplotlib documentation](https://matplotlib.org/docs/)
 
 ## How to Use
 
