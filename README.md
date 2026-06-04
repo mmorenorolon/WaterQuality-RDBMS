@@ -71,6 +71,7 @@ HUC (Hydrologic Unit Code) codes are standardized geographic areas used by the U
 ## Database Schema
 
 The cleaned data is loaded into a DuckDB database with the following relational structure.
+
 ![Database Schema Diagram](images/final_project_schema.png)
 
 ### Data Cleaning Process
@@ -170,9 +171,9 @@ Ref: result.characteristic_id > characteristic.characteristic_id
 This structure supports one-to-many relationships:
 
 ```
-station (1) ──→ (many) activity
-activity (1) ──→ (many) result
-characteristic (1) ──→ (many) result
+station (1) ── (many) activity
+activity (1) ── (many) result
+characteristic (1) ── (many) result
 ```
 
 Foreign key constraints prevent orphaned records and ensure data consistency across all tables.
@@ -181,12 +182,15 @@ Foreign key constraints prevent orphaned records and ensure data consistency acr
 
 ```
 WaterQuality-RDBMS/
+├── .git/                              # Git version control
+├── .gitignore                         # Git ignore file
 ├── README.md                          # Project documentation and schema reference
 ├── LICENSE                            # MIT License
 ├── requirements.txt                   # Python package dependencies (pandas, duckdb, matplotlib)
+│
+├── Data Files (CSV)
 ├── data_raw/                          # Raw data from Water Quality Portal
 │   ├── activity.csv                   # Raw sampling events data
-│   ├── characteristic.csv             # Raw water quality variable metadata
 │   ├── result.csv                     # Raw measurement results
 │   └── station.csv                    # Raw monitoring location metadata
 ├── data_processed/                    # Cleaned and standardized CSV files
@@ -194,19 +198,36 @@ WaterQuality-RDBMS/
 │   ├── characteristic_clean.csv       # Cleaned characteristic data (derived from result)
 │   ├── result_clean.csv               # Cleaned measurement results
 │   └── station_clean.csv              # Cleaned station data
-├── database/                          # DuckDB database file (created after running create_database.sql)
+│
+├── Database Files
+├── database/                          # DuckDB database directory
+│   └── database.duckdb                # DuckDB database file (created after setup)
+│
+├── Python Scripts
 ├── data_cleaning.py                   # Python script for data cleaning and preprocessing
+│
+├── SQL Scripts
 ├── create_database.sql                # Main SQL script: defines all 4 tables and loads cleaned CSVs
 ├── test_station.sql                   # Individual SQL script: station table schema only
 ├── test_activity.sql                  # Individual SQL script: activity table schema only
 ├── test_characteristic.sql            # Individual SQL script: characteristic table schema only
 ├── test_result.sql                    # Individual SQL script: result table schema only
-├── data_exploration.ipynb             # Jupyter notebook: exploratory data analysis
-├── database_visualization.ipynb       # Jupyter notebook: query results and visualizations
-├── plot_study_area.ipynb              # Jupyter notebook: geographic/spatial analysis
-├── final_project_schema.png           # Visual diagram of database schema and relationships
+│
+├── Jupyter Notebooks
+├── data_exploration.ipynb             # Notebook: exploratory data analysis
+├── database_visualization.ipynb       # Notebook: query results and visualizations
+│
+├── Geographic Data
+├── Oakland_Inner_Harbor-San_Francisco_Bay.kml  # KML file of study area boundary
+│
+├── Visualizations & Assets
 ├── images/                            # Directory: generated visualizations and maps
-└── WBD_Shape/                         # Directory: watershed boundary shapefiles
+│   ├── final_project_schema.png       # Visual diagram of database schema and relationships
+│   └── project_location_image.jpg     # Geographic visualization of study area
+├── data_viz/                          # Directory: analysis output data
+│   └── top_characteristics.csv        # CSV of top measured characteristics
+│
+└── .ipynb_checkpoints/                # Jupyter notebook checkpoints (auto-generated)
 ```
 
 ### File Description Guide
@@ -214,6 +235,16 @@ WaterQuality-RDBMS/
 **SQL Scripts:**
 - `create_database.sql` - **Complete database setup** - Use this to create all tables and load all cleaned data in one operation (primary method)
 - `test_*.sql` - **Individual table definitions** - Use these for testing individual table creation or if you need to load one table at a time
+
+**Python Scripts:**
+- `data_cleaning.py` - Processes raw CSV files, cleans and standardizes column names and data types, outputs to `data_processed/`
+
+**Jupyter Notebooks:**
+- `data_exploration.ipynb` - Exploratory data analysis of raw and cleaned data
+- `database_visualization.ipynb` - SQL queries, analysis, and visualization of results
+
+**Geographic Data:**
+- `Oakland_Inner_Harbor-San_Francisco_Bay.kml` - KML file defining the study area boundary for the HUC12 subwatershed
 
 ## Data Pipeline Workflow
 
@@ -276,11 +307,11 @@ pip install -r requirements.txt
 
 #### Step 1: Prepare Raw Data
 
-Download data from the [Water Quality Portal](https://www.waterqualitydata.us/) filtered for HUC12: 180500021002.
+Download data from the [Water Quality Portal](https://www.waterqualitydata.us/) filtered for HUC12: 180500041002.
 Alternatively, access the links directly from their API:
-- https://www.waterqualitydata.us/data/Station/search?huc=180500021002&mimeType=csv
-- https://www.waterqualitydata.us/data/Activity/search?huc=180500021002&mimeType=csv
-- https://www.waterqualitydata.us/data/Result/search?huc=180500021002&mimeType=csv
+- https://www.waterqualitydata.us/data/Station/search?huc=180500041002&mimeType=csv
+- https://www.waterqualitydata.us/data/Activity/search?huc=180500041002&mimeType=csv
+- https://www.waterqualitydata.us/data/Result/search?huc=180500041002&mimeType=csv
  
  Place the following files in `data_raw/`:
 - `activity.csv`
