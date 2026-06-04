@@ -19,7 +19,9 @@ A comprehensive project to build a relational database from EPA Water Quality Po
 
 ## Project Overview
 
-This project builds a relational database to analyze water quality measurements within a subwatershed of the San Francisco Bay region (HUC12: 180500021002). The goal is to organize environmental monitoring data into a structured format that enables efficient querying and analysis of water quality patterns.
+[HUC12: 180500041002](images/project_location_image.jpg)
+
+This project builds a relational database to analyze water quality measurements within a subwatershed of the San Francisco Bay region (HUC12: 180500041002). The goal is to organize environmental monitoring data into a structured format that enables efficient querying and analysis of water quality patterns.
 
 The database is designed to reflect real-world data collection processes, linking monitoring locations (stations), sampling events (activities), and laboratory measurements (results). Using this structured approach, the project demonstrates the ability to clean real-world environmental data, design a relational database schema, and extract meaningful insights using SQL.
 
