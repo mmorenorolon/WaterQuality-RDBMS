@@ -223,11 +223,10 @@ WaterQuality-RDBMS/
 ├── Visualizations & Assets
 ├── images/                            # Directory: generated visualizations and maps
 │   ├── final_project_schema.png       # Visual diagram of database schema and relationships
-│   └── project_location_image.jpg     # Geographic visualization of study area
-├── data_viz/                          # Directory: analysis output data
-│   └── top_characteristics.csv        # CSV of top measured characteristics
-│
-└── .ipynb_checkpoints/                # Jupyter notebook checkpoints (auto-generated)
+│   └── project_location_image.jpg     # Geographic map of study area
+├── query_output/                          # Directory: analysis output data
+    └── top_characteristics.csv        # CSV of top measured characteristics by station
+
 ```
 
 ### File Description Guide
