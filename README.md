@@ -49,6 +49,18 @@ The raw dataset includes three main data tables:
 
 The data was filtered using a 12-digit Hydrologic Unit Code (HUC12) corresponding to a subwatershed within the San Francisco Bay region.
 
+### Data Access
+
+Raw data can be accessed directly from the Water Quality Portal using these HUC-filtered CSV endpoints:
+
+- **Station data**: https://www.waterqualitydata.us/data/Station/search?huc=180500041002&mimeType=csv
+- **Activity data**: https://www.waterqualitydata.us/data/Activity/search?huc=180500041002&mimeType=csv
+- **Result data**: https://www.waterqualitydata.us/data/Result/search?huc=180500041002&mimeType=csv
+
+### Characteristic Table Derivation
+
+The **Characteristic** table was derived from the Result dataset by extracting unique characteristic names, USGS parameter codes, and related metadata. The Water Quality Portal does not provide a HUC-filtered CharacteristicMetadata CSV, so characteristic information was inferred directly from the Result table during the data cleaning process. This ensures consistency between measured results and their corresponding characteristic definitions.
+
 ### About HUC12 Codes
 
 HUC (Hydrologic Unit Code) codes are standardized geographic areas used by the USGS to classify watersheds and subwatersheds. The 12-digit code (HUC12) represents the most detailed watershed classification level. Learn more at the [USGS Watershed Boundary Dataset](https://www.usgs.gov/national-hydrography/watershed-boundary-dataset).
