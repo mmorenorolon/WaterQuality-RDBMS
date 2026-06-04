@@ -36,7 +36,7 @@ The database is designed to reflect real-world data collection processes, linkin
 - **Notebooks**: Jupyter Notebook
 - **Visualization**: matplotlib, seaborn
 - **Data Source**: Water Quality Portal (WaterQualityData.us)
-- **Geographic Focus**: San Francisco Bay region (HUC12: 180500021002)
+- **Geographic Focus**: San Francisco Bay region (HUC12: 180500041002)
 
 ## Data Source
 
@@ -182,51 +182,40 @@ Foreign key constraints prevent orphaned records and ensure data consistency acr
 
 ```
 WaterQuality-RDBMS/
-├── .git/                              # Git version control
-├── .gitignore                         # Git ignore file
-├── README.md                          # Project documentation and schema reference
-├── LICENSE                            # MIT License
-├── requirements.txt                   # Python package dependencies (pandas, duckdb, matplotlib)
-│
-├── Data Files (CSV)
-├── data_raw/                          # Raw data from Water Quality Portal
-│   ├── activity.csv                   # Raw sampling events data
-│   ├── result.csv                     # Raw measurement results
-│   └── station.csv                    # Raw monitoring location metadata
-├── data_processed/                    # Cleaned and standardized CSV files
-│   ├── activity_clean.csv             # Cleaned activity data
-│   ├── characteristic_clean.csv       # Cleaned characteristic data (derived from result)
-│   ├── result_clean.csv               # Cleaned measurement results
-│   └── station_clean.csv              # Cleaned station data
-│
-├── Database Files
-├── database/                          # DuckDB database directory
-│   └── database.duckdb                # DuckDB database file (created after setup)
-│
-├── Python Scripts
-├── data_cleaning.py                   # Python script for data cleaning and preprocessing
-│
-├── SQL Scripts
-├── create_database.sql                # Main SQL script: defines all 4 tables and loads cleaned CSVs
-├── test_station.sql                   # Individual SQL script: station table schema only
-├── test_activity.sql                  # Individual SQL script: activity table schema only
-├── test_characteristic.sql            # Individual SQL script: characteristic table schema only
-├── test_result.sql                    # Individual SQL script: result table schema only
-│
-├── Jupyter Notebooks
-├── data_exploration.ipynb             # Notebook: exploratory data analysis
-├── database_visualization.ipynb       # Notebook: query results and visualizations
-│
-├── Geographic Data
-├── Oakland_Inner_Harbor-San_Francisco_Bay.kml  # KML file of study area boundary
-│
-├── Visualizations & Assets
-├── images/                            # Directory: generated visualizations and maps
-│   ├── final_project_schema.png       # Visual diagram of database schema and relationships
-│   └── project_location_image.jpg     # Geographic map of study area
-├── query_output/                          # Directory: analysis output data
-    └── top_characteristics.csv        # CSV of top measured characteristics by station
-
+│   .gitignore                         # Specifies files and folders excluded from Git tracking
+│   create_database.sql                # Creates database tables, relationships, and loads cleaned data
+│   database_visualization.ipynb       # Notebook for querying the database and creating visualizations
+│   data_cleaning.py                   # Script for cleaning and preparing raw WQP data
+│   data_exploration.ipynb             # Notebook for exploring raw and cleaned datasets
+│   LICENSE                            # Project license
+│   Oakland_Inner_Harbor-San_Francisco_Bay.kml  # Study area boundary file
+│   README.md                          # Project documentation
+│   requirements.txt                   # Python package dependencies
+│   test_activity.sql                  # SQL script for testing the activity table
+│   test_characteristic.sql            # SQL script for testing the characteristic table
+│   test_result.sql                    # SQL script for testing the result table
+│   test_station.sql                   # SQL script for testing the station table
+│   
+├───database
+│       database.duckdb                # DuckDB database file
+│       
+├───data_processed
+│       activity_clean.csv             # Cleaned sampling activity data
+│       characteristic_clean.csv       # Cleaned characteristic metadata derived from results
+│       result_clean.csv               # Cleaned water quality measurement data
+│       station_clean.csv              # Cleaned monitoring station data
+│       
+├───data_raw
+│       activity.csv                   # Raw activity data downloaded from WQP
+│       result.csv                     # Raw result data downloaded from WQP
+│       station.csv                    # Raw station data downloaded from WQP
+│       
+├───images
+│       final_project_schema.png       # Database schema diagram
+│       project_location_image.jpg     # Map of the project study area
+│       
+└───query_output
+        top_characteristics.csv        # Output CSV of the most frequently measured characteristics
 ```
 
 ### File Description Guide
