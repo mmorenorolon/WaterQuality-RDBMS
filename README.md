@@ -14,12 +14,13 @@ A comprehensive project to build a relational database from EPA Water Quality Po
 - [How to Use](#how-to-use)
 - [Analysis & Visualization](#analysis--visualization)
 - [Deliverables](#deliverables)
-- [Contributing](#contributing)
+- [Key Outputs](#key-outputs)
+- [References](#references)
 - [License](#license)
 
 ## Project Overview
 
-[HUC12: 180500041002](images/project_location_image.jpg)
+![HUC12: 180500041002](images/project_location_image.jpg)
 
 This project builds a relational database to analyze water quality measurements within a subwatershed of the San Francisco Bay region (HUC12: 180500041002). The goal is to organize environmental monitoring data into a structured format that enables efficient querying and analysis of water quality patterns.
 
@@ -69,7 +70,8 @@ HUC (Hydrologic Unit Code) codes are standardized geographic areas used by the U
 
 ## Database Schema
 
-The cleaned data is loaded into a DuckDB database with the following relational structure (see `final_project_schema.png` for a visual diagram).
+The cleaned data is loaded into a DuckDB database with the following relational structure.
+![Database Schema Diagram](images/final_project_schema.png)
 
 ### Data Cleaning Process
 
@@ -89,15 +91,15 @@ Stores metadata about monitoring locations.
 
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| `station_id` | TEXT | PRIMARY KEY | Unique identifier for monitoring location |
-| `station_name` | TEXT | | Human-readable name of the station |
-| `station_type` | TEXT | | Type of monitoring location (e.g., Well, Stream) |
+| `station_id` | VARCHAR | PRIMARY KEY | Unique identifier for monitoring location |
+| `station_name` | VARCHAR | | Human-readable name of the station |
+| `station_type` | VARCHAR | | Type of monitoring location (e.g., Well, Stream) |
 | `latitude` | DOUBLE | | Geographic latitude coordinate |
 | `longitude` | DOUBLE | | Geographic longitude coordinate |
-| `huc8` | TEXT | | 8-digit Hydrologic Unit Code |
-| `state_code` | TEXT | | State abbreviation |
-| `county_code` | TEXT | | County code |
-| `provider_name` | TEXT | | Data provider organization name |
+| `huc8` | VARCHAR | | 8-digit Hydrologic Unit Code |
+| `state_code` | VARCHAR | | State abbreviation |
+| `county_code` | VARCHAR | | County code |
+| `provider_name` | VARCHAR | | Data provider organization name |
 
 ### Table: `activity`
 
@@ -105,21 +107,19 @@ Stores sampling events conducted at each station.
 
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| `activity_pk` | INTEGER | PRIMARY KEY | Auto-incrementing primary key |
-| `activity_id` | TEXT | NOT NULL, UNIQUE* | Unique activity identifier |
-| `station_id` | TEXT | FOREIGN KEY | References station(station_id) |
-| `activity_type` | TEXT | | Type of sampling activity |
+| `activity_pk` | INT | PRIMARY KEY | Auto-incrementing primary key |
+| `activity_id` | VARCHAR | | Unique activity identifier |
+| `station_id` | VARCHAR | NOT NULL, FK | Foreign key referencing station(station_id) |
+| `activity_type` | VARCHAR | | Type of sampling activity |
 | `activity_start_date` | DATE | | Date when sampling occurred |
 | `activity_start_time` | TIME | | Time when sampling started |
-| `activity_media` | TEXT | | Sampling medium (Water, Sediment, etc.) |
+| `activity_media` | VARCHAR | | Sampling medium (Water, Sediment, etc.) |
 | `activity_depth_m` | DOUBLE | | Sampling depth in meters |
-| `activity_depth_original_value` | DOUBLE | | Original depth value |
-| `activity_depth_original_unit` | TEXT | | Original depth unit |
-| `activity_depth_reference_point` | TEXT | | Reference point for depth measurement |
-| `activity_depth_flag` | TEXT | | Quality flag for depth data |
+| `activity_depth_original_value` | DOUBLE | | Original depth value (before conversion) |
+| `activity_depth_original_unit` | VARCHAR | | Original depth unit (before standardization) |
+| `activity_depth_reference_point` | VARCHAR | | Reference point for depth measurement |
+| `activity_depth_flag` | VARCHAR | | Quality flag for depth data |
 | `activity_comment` | TEXT | | Additional comments about the activity |
-
-*Part of composite UNIQUE constraint with station_id, date, time, type, media
 
 ### Table: `characteristic`
 
@@ -127,11 +127,9 @@ Stores metadata about measured water quality variables.
 
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| `characteristic_id` | INTEGER | PRIMARY KEY | Unique identifier for the variable |
-| `characteristic_name` | TEXT | NOT NULL, UNIQUE* | Name of the measured characteristic |
-| `usgs_pcode` | TEXT | NOT NULL, UNIQUE* | USGS parameter code |
-
-*Part of composite UNIQUE constraint
+| `characteristic_id` | INT | PRIMARY KEY | Unique identifier for the variable |
+| `characteristic_name` | VARCHAR | NOT NULL | Name of the measured characteristic |
+| `usgs_pcode` | VARCHAR | | USGS parameter code for the characteristic |
 
 ### Table: `result`
 
@@ -139,29 +137,37 @@ Stores measured water quality values and detection limits.
 
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| `result_pk` | INTEGER | PRIMARY KEY | Auto-incrementing primary key |
-| `activity_pk` | INTEGER | FOREIGN KEY | References activity(activity_pk) |
-| `characteristic_id` | INTEGER | FOREIGN KEY | References characteristic(characteristic_id) |
-| `activity_id_source` | TEXT | | Source activity identifier |
-| `station_id_source` | TEXT | | Source station identifier |
+| `result_pk` | INT | PRIMARY KEY | Auto-incrementing primary key |
+| `activity_pk` | INT | NOT NULL, FK | Foreign key referencing activity(activity_pk) |
+| `characteristic_id` | INT | NOT NULL, FK | Foreign key referencing characteristic(characteristic_id) |
+| `activity_id_source` | VARCHAR | | Source activity identifier from WQP |
+| `station_id_source` | VARCHAR | | Source station identifier from WQP |
 | `result_value` | DOUBLE | | Measured value |
-| `result_unit` | TEXT | | Unit of measurement |
-| `result_detection_condition` | TEXT | | Detection status (Detected, Not Detected, etc.) |
-| `result_status` | TEXT | | Validation status of the result |
-| `result_sample_fraction` | TEXT | | Fraction analyzed (Dissolved, Total, etc.) |
-| `measure_qualifier` | TEXT | | Qualifier flags for the measurement |
+| `result_unit` | VARCHAR | | Unit of measurement |
+| `result_detection_condition` | VARCHAR | | Detection status (Detected, Not Detected, etc.) |
+| `result_status` | VARCHAR | | Validation status of the result |
+| `result_sample_fraction` | VARCHAR | | Fraction analyzed (Dissolved, Total, etc.) |
+| `measure_qualifier` | VARCHAR | | Qualifier flags for the measurement |
 | `detection_limit_value` | DOUBLE | | Minimum detectable concentration |
-| `detection_limit_unit` | TEXT | | Unit of detection limit |
-| `detection_limit_type` | TEXT | | Type of detection limit |
-| `analytical_method_id` | TEXT | | Method identifier |
-| `analytical_method_context` | TEXT | | Method context/source |
-| `analytical_method_name` | TEXT | | Name of analytical method used |
+| `detection_limit_unit` | VARCHAR | | Unit of detection limit |
+| `detection_limit_type` | VARCHAR | | Type of detection limit |
+| `analytical_method_id` | VARCHAR | | Method identifier |
+| `analytical_method_context` | VARCHAR | | Method context/source |
+| `analytical_method_name` | VARCHAR | | Name of analytical method used |
 | `result_comment` | TEXT | | Additional result comments |
-| `provider_name` | TEXT | | Data provider organization |
+| `provider_name` | VARCHAR | | Data provider organization |
 
 ### Schema Relationships
 
-The schema supports one-to-many relationships:
+The schema enforces referential integrity through the following foreign key relationships:
+
+```
+Ref: activity.station_id > station.station_id
+Ref: result.activity_pk > activity.activity_pk
+Ref: result.characteristic_id > characteristic.characteristic_id
+```
+
+This structure supports one-to-many relationships:
 
 ```
 station (1) ──→ (many) activity
@@ -169,7 +175,7 @@ activity (1) ──→ (many) result
 characteristic (1) ──→ (many) result
 ```
 
-This structure ensures referential integrity and prevents orphaned records through foreign key constraints.
+Foreign key constraints prevent orphaned records and ensure data consistency across all tables.
 
 ## Project Structure
 
@@ -347,13 +353,6 @@ Query the database and create visualizations of results. Use this to:
 - Visualize temporal and spatial patterns in water quality
 - Generate summary tables and statistics
 
-#### `plot_study_area.ipynb`
-Geographic and spatial analysis. Use this to:
-- Visualize monitoring station locations on a map
-- Overlay watershed boundary shapefiles from `WBD_Shape/`
-- Create spatial visualizations of water quality data
-- Analyze geographic patterns in the data
-
 ### Schema Diagram
 
 A visual representation of the database schema and table relationships is provided in `final_project_schema.png`. This diagram illustrates:
@@ -365,12 +364,12 @@ A visual representation of the database schema and table relationships is provid
 
 The final project includes:
 
-- ✅ A cleaned and structured DuckDB database with relational schema
-- ✅ SQL queries addressing analytical questions related to water quality patterns
-- ✅ Visualizations created in Python to support the analysis
-- ✅ Comprehensive documentation of the data, schema, and workflow
-- ✅ A schema diagram illustrating table relationships
-- ✅ Jupyter notebooks for data exploration, analysis, and visualization
+- A cleaned and structured DuckDB database with relational schema
+- SQL queries addressing analytical questions related to water quality patterns
+- Visualizations created in Python to support the analysis
+- Comprehensive documentation of the data, schema, and workflow
+- A schema diagram illustrating table relationships
+- Jupyter notebooks for data exploration, analysis, and visualization
 
 ### Key Outputs
 
@@ -380,15 +379,11 @@ The final project includes:
 - **SQL queries**: Reusable queries for future analysis
 - **Documentation**: Complete data dictionary and schema documentation
 
-## Contributing
+## References
 
-Contributions are welcome! If you'd like to improve this project, please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
+- Water Quality Portal. (2019). Water Quality Portal data. https://www.waterqualitydata.us/
+- U.S. Geological Survey. (2025). Watershed Boundary Dataset. https://www.usgs.gov/national-hydrography/watershed-boundary-dataset
+- DuckDB. (2019). DuckDB documentation. https://duckdb.org/docs/
 
 ## License
 
