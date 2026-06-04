@@ -181,33 +181,39 @@ Foreign key constraints prevent orphaned records and ensure data consistency acr
 
 ```
 WaterQuality-RDBMS/
-├── README.md                          # Documentation
+├── README.md                          # Project documentation and schema reference
 ├── LICENSE                            # MIT License
-├── requirements.txt                   # Python dependencies
+├── requirements.txt                   # Python package dependencies (pandas, duckdb, matplotlib)
 ├── data_raw/                          # Raw data from Water Quality Portal
-│   ├── activity.csv
-│   ├── characteristic.csv
-│   ├── result.csv
-│   └── station.csv
-├── data_processed/                    # Cleaned CSV files
-│   ├── activity_clean.csv
-│   ├── characteristic_clean.csv
-│   ├── result_clean.csv
-│   └── station_clean.csv
-├── database/                          # DuckDB database file
-├── data_cleaning.py                   # Data cleaning script
-├── create_database.sql                # Main database schema and load
-├── test_station.sql                   # Individual table definitions
-├── test_activity.sql
-├── test_characteristic.sql
-├── test_result.sql
-├── data_exploration.ipynb             # EDA notebook
-├── database_visualization.ipynb       # Query results & visualizations
-├── plot_study_area.ipynb              # Geographic analysis
-├── final_project_schema.png           # Schema diagram
-├── images/                            # Generated visualizations
-└── WBD_Shape/                         # Watershed boundary shapefiles
+│   ├── activity.csv                   # Raw sampling events data
+│   ├── characteristic.csv             # Raw water quality variable metadata
+│   ├── result.csv                     # Raw measurement results
+│   └── station.csv                    # Raw monitoring location metadata
+├── data_processed/                    # Cleaned and standardized CSV files
+│   ├── activity_clean.csv             # Cleaned activity data
+│   ├── characteristic_clean.csv       # Cleaned characteristic data (derived from result)
+│   ├── result_clean.csv               # Cleaned measurement results
+│   └── station_clean.csv              # Cleaned station data
+├── database/                          # DuckDB database file (created after running create_database.sql)
+├── data_cleaning.py                   # Python script for data cleaning and preprocessing
+├── create_database.sql                # Main SQL script: defines all 4 tables and loads cleaned CSVs
+├── test_station.sql                   # Individual SQL script: station table schema only
+├── test_activity.sql                  # Individual SQL script: activity table schema only
+├── test_characteristic.sql            # Individual SQL script: characteristic table schema only
+├── test_result.sql                    # Individual SQL script: result table schema only
+├── data_exploration.ipynb             # Jupyter notebook: exploratory data analysis
+├── database_visualization.ipynb       # Jupyter notebook: query results and visualizations
+├── plot_study_area.ipynb              # Jupyter notebook: geographic/spatial analysis
+├── final_project_schema.png           # Visual diagram of database schema and relationships
+├── images/                            # Directory: generated visualizations and maps
+└── WBD_Shape/                         # Directory: watershed boundary shapefiles
 ```
+
+### File Description Guide
+
+**SQL Scripts:**
+- `create_database.sql` - **Complete database setup** - Use this to create all tables and load all cleaned data in one operation (primary method)
+- `test_*.sql` - **Individual table definitions** - Use these for testing individual table creation or if you need to load one table at a time
 
 ## Data Pipeline Workflow
 
