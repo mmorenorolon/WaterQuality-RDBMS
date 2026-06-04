@@ -1,0 +1,426 @@
+characteristic_id,characteristic_name,usgs_pcode
+1,".alpha.-1,2,3,4,5,6-Hexachlorocyclohexane-D6 or alpha-HCH D6",91065.0
+2,.alpha.-Endosulfan,UNKNOWN
+3,.alpha.-Hexachlorocyclohexane,34253.0
+4,.alpha.-Hexachlorocyclohexane,UNKNOWN
+5,.beta.-Endosulfan,UNKNOWN
+6,.beta.-Hexachlorocyclohexane,UNKNOWN
+7,.delta.-Hexachlorocyclohexane,UNKNOWN
+8,"1,2,3,4,6,7,8-Heptachlorodibenzo-p-dioxin",UNKNOWN
+9,"1,2,3,4,6,7,8-Heptachlorodibenzofuran",UNKNOWN
+10,"1,6,7-Trimethylnaphthalene",UNKNOWN
+11,1-Methylnaphthalene,UNKNOWN
+12,1-Methylphenanthrene,UNKNOWN
+13,1rs Cis-Permethrin,82687.0
+14,"2,2',3,3',4,4',5,5',6-Nonachlorobiphenyl",UNKNOWN
+15,"2,2',3,3',4,4',5,5'-Octachlorobiphenyl",UNKNOWN
+16,"2,2',3,3',4,4',5,6-Octachlorobiphenyl",UNKNOWN
+17,"2,2',3,3',4,4',5-Heptachlorobiphenyl",UNKNOWN
+18,"2,2',3,3',4,4'-Hexachlorobiphenyl",UNKNOWN
+19,"2,2',3,3',4,5',6'-Heptachlorobiphenyl",UNKNOWN
+20,"2,2',3,3',4,5',6,6'-Octachlorobiphenyl",UNKNOWN
+21,"2,2',3,3',4,5,6'-Heptachlorobiphenyl",UNKNOWN
+22,"2,2',3,3',4,5,6,6'-Octachlorobiphenyl",UNKNOWN
+23,"2,2',3,4',5',6-Hexachlorobiphenyl",UNKNOWN
+24,"2,2',3,4',5'-Pentachlorobiphenyl",UNKNOWN
+25,"2,2',3,4',5,5',6-Heptachlorobiphenyl",UNKNOWN
+26,"2,2',3,4,4',5',6-Heptachlorobiphenyl",UNKNOWN
+27,"2,2',3,4,4',5'-Hexachlorobiphenyl",UNKNOWN
+28,"2,2',3,4,4',5,5'-Heptachlorobiphenyl",UNKNOWN
+29,"2,2',3,4,5'-Pentachlorobiphenyl",UNKNOWN
+30,"2,2',3,4,5,5',6-Heptachlorobiphenyl",UNKNOWN
+31,"2,2',3,4,5,5'-Hexachlorobiphenyl",UNKNOWN
+32,"2,2',3,5',6-Pentachlorobiphenyl",UNKNOWN
+33,"2,2',3,5'-Tetrachlorobiphenyl",UNKNOWN
+34,"2,2',3,5,5',6-Hexachlorobiphenyl",UNKNOWN
+35,"2,2',4,4',5,5'-Hexachlorobiphenyl",UNKNOWN
+36,"2,2',4,4',5-Pentachlorobiphenyl",UNKNOWN
+37,"2,2',4,5'-Tetrachlorobiphenyl",UNKNOWN
+38,"2,2',4,5,5'-Pentachlorobiphenyl",UNKNOWN
+39,"2,2',5,5'-Tetrachlorobiphenyl",UNKNOWN
+40,"2,2',5-Trichlorobiphenyl",UNKNOWN
+41,"2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene",UNKNOWN
+42,"2,3',4',5-Tetrachlorobiphenyl",UNKNOWN
+43,"2,3',4'-Trichlorobiphenyl",UNKNOWN
+44,"2,3',4,4',5',6-Hexachlorobiphenyl",UNKNOWN
+45,"2,3',4,4',5'-Pentachlorobiphenyl",UNKNOWN
+46,"2,3',4,4',5,5'-Hexachlorobiphenyl",UNKNOWN
+47,"2,3',4,4',5-Pentachlorobiphenyl",UNKNOWN
+48,"2,3',4,4',6-Pentachlorobiphenyl",UNKNOWN
+49,"2,3',4,4'-Tetrachlorobiphenyl",UNKNOWN
+50,"2,3,3',4',6-Pentachlorobiphenyl",UNKNOWN
+51,"2,3,3',4'-Tetrachlorobiphenyl",UNKNOWN
+52,"2,3,3',4,4',5'-Hexachlorobiphenyl",UNKNOWN
+53,"2,3,3',4,4',5,5'-Heptachlorobiphenyl",UNKNOWN
+54,"2,3,3',4,4',5-Hexachlorobiphenyl",UNKNOWN
+55,"2,3,3',4,4',6-Hexachlorobiphenyl",UNKNOWN
+56,"2,3,3',4,4'-Pentachlorobiphenyl",UNKNOWN
+57,"2,3,3',4,6-Pentachlorobiphenyl",UNKNOWN
+58,"2,3,4,4',5-Pentachlorobiphenyl",UNKNOWN
+59,"2,3,5,6-Tetrachlorobiphenyl",UNKNOWN
+60,"2,3,5-Trimethylnaphthalene***retired***use 1,6,7-Trimethylnaphthalene",UNKNOWN
+61,"2,3,6-Trichlorobiphenyl",UNKNOWN
+62,"2,4',5-Trichlorobiphenyl",UNKNOWN
+63,"2,4'-Dichlorobiphenyl",UNKNOWN
+64,"2,4,4',5-Tetrachlorobiphenyl",UNKNOWN
+65,"2,4,4'-Trichlorobiphenyl",UNKNOWN
+66,"2,4,5-Trichlorobiphenyl",UNKNOWN
+67,"2,4-Dichlorobiphenyl",UNKNOWN
+68,"2,5-Dichlorobiphenyl",UNKNOWN
+69,"2,6-Dichlorobiphenyl",UNKNOWN
+70,"2,6-Diethylaniline",82660.0
+71,"2,6-Dimethylnaphthalene",UNKNOWN
+72,2-Chloro-4-isopropylamino-6-amino-s-triazine,4040.0
+73,2-Chlorobiphenyl,UNKNOWN
+74,2-Methylnaphthalene,UNKNOWN
+75,2-Methylphenanthrene,UNKNOWN
+76,"3,3',4,4',5,5'-Hexachlorobiphenyl",UNKNOWN
+77,"3,3',4,4',5-Pentachlorobiphenyl",UNKNOWN
+78,"3,3',4,4'-Tetrachlorobiphenyl",UNKNOWN
+79,"3,4,4',5-Tetrachlorobiphenyl",UNKNOWN
+80,"3,4,4'-Trichlorobiphenyl",UNKNOWN
+81,3-Chlorobiphenyl,UNKNOWN
+82,"4,4'-Dibromo-2,2',3,3',5,5',6,6'-octafluorobiphenyl",UNKNOWN
+83,4-Chlorobiphenyl,UNKNOWN
+84,Absorbance at 280 nanometers,32296.0
+85,Absorbance at 280 nm,UNKNOWN
+86,Absorbance at 370 nanometers,32297.0
+87,Absorbance at 412 nm,32298.0
+88,Absorbance at 440 nm,32299.0
+89,Absorption spectral slope (Sag),32300.0
+90,Absorption spectral slope (Sag),32301.0
+91,Absorption spectral slope (Sag),32302.0
+92,Absorption spectral slope (Sag),32303.0
+93,Acenaphthene,UNKNOWN
+94,Acenaphthene-d10,UNKNOWN
+95,Acenaphthylene,UNKNOWN
+96,Acenaphthylene-d8,UNKNOWN
+97,"Acidity, (H+)",191.0
+98,Alachlor,46342.0
+99,Aldrin,UNKNOWN
+100,Aluminum,34792.0
+101,Aluminum,UNKNOWN
+102,Ammonia,UNKNOWN
+103,Ammonia and ammonium,608.0
+104,Ammonia and ammonium,71846.0
+105,Ammonia-nitrogen,UNKNOWN
+106,Ammonium,UNKNOWN
+107,Ammonium as NH4,UNKNOWN
+108,Anthracene,UNKNOWN
+109,Anthracene-d10,UNKNOWN
+110,Antimony,UNKNOWN
+111,Arsenic,34802.0
+112,Arsenic,UNKNOWN
+113,Atrazine,39632.0
+114,Azinphos-methyl,82686.0
+115,Barium,34807.0
+116,Bed sediment particle size,80157.0
+117,Bed sediment particle size,80164.0
+118,Bed sediment particle size,80165.0
+119,Bed sediment particle size,80166.0
+120,Bed sediment particle size,80167.0
+121,Bed sediment particle size,80282.0
+122,Bed sediment particle size,80283.0
+123,Bed sediment particle size,80293.0
+124,Bed sediment particle size,80294.0
+125,Benfluralin,82673.0
+126,Benz[a]anthracene,UNKNOWN
+127,Benzo(a)anthracene-D12,UNKNOWN
+128,Benzo(b)fluoranthene,UNKNOWN
+129,Benzo(b)fluoranthene-D12,UNKNOWN
+130,"Benzo(g,h,i)perylene-D12",UNKNOWN
+131,Benzo[a]pyrene,UNKNOWN
+132,Benzo[e]pyrene,UNKNOWN
+133,"Benzo[g,h,i]perylene",UNKNOWN
+134,Benzo[ghi]perylene,UNKNOWN
+135,Benzo[k]fluoranthene,UNKNOWN
+136,Beryllium,34812.0
+137,Biogenic Silica,UNKNOWN
+138,Biphenyl,UNKNOWN
+139,Bismuth,34817.0
+140,Butylate,4028.0
+141,C1-Benzo[a]anthracenes/chrysenes,UNKNOWN
+142,C1-C3 Fluorenes,UNKNOWN
+143,C1-Fluoranthenes/pyrenes,UNKNOWN
+144,C1-Phenanthrenes/anthracenes,UNKNOWN
+145,C2-Benzo[a]anthracenes/chrysenes,UNKNOWN
+146,C2-Dibenzothiophenes,UNKNOWN
+147,C2-Fluorenes,UNKNOWN
+148,C2-Naphthalenes,UNKNOWN
+149,C2-Phenanthrenes/anthracenes,UNKNOWN
+150,C3-Benzo[a]anthracenes/chrysenes,UNKNOWN
+151,C3-Dibenzothiophenes,UNKNOWN
+152,C3-Fluorenes,UNKNOWN
+153,C3-Naphthalenes,UNKNOWN
+154,C3-Phenanthrenes/anthracenes,UNKNOWN
+155,C4-Benzo[a]anthracenes/chrysenes,UNKNOWN
+156,C4-Naphthalenes,UNKNOWN
+157,C4-Phenanthrenes/anthracenes,UNKNOWN
+158,Cadmium,34827.0
+159,Cadmium,UNKNOWN
+160,Calcium,34832.0
+161,Carbaryl,82680.0
+162,Carbofuran,82674.0
+163,Carbon,694.0
+164,Carbon,UNKNOWN
+165,Cerium,34837.0
+166,Chlorophyll a,32737.0
+167,Chlorophyll a,70953.0
+168,Chlorophyll a,UNKNOWN
+169,"Chlorophyll a, corrected for pheophytin",UNKNOWN
+170,"Chlorophyll a, uncorrected for pheophytin",UNKNOWN
+171,Chlorpyrifos,38933.0
+172,Chlorpyrifos,UNKNOWN
+173,Chlorpyrifos-methyl,UNKNOWN
+174,Chlorthal-dimethyl,82682.0
+175,Chlorthal-dimethyl,UNKNOWN
+176,Chromium,34842.0
+177,Chromium,UNKNOWN
+178,Chrysene,UNKNOWN
+179,Chrysene-d12,UNKNOWN
+180,Cobalt,34847.0
+181,Cobalt,UNKNOWN
+182,Conductivity,UNKNOWN
+183,Copper,34852.0
+184,Copper,UNKNOWN
+185,Coronene,UNKNOWN
+186,Count,UNKNOWN
+187,Cyanazine,4041.0
+188,Cyanide,UNKNOWN
+189,Decachlorobiphenyl,UNKNOWN
+190,Density as sigma-t,UNKNOWN
+191,Depth,64.0
+192,Depth,UNKNOWN
+193,"Depth, Secchi disk depth",UNKNOWN
+194,Diazinon,39572.0
+195,Diazinon,UNKNOWN
+196,Diazinon-D10,91063.0
+197,"Dibenz[a,h]anthracene",UNKNOWN
+198,Dibenzothiophene,UNKNOWN
+199,Dibenzothiophene (C1-C3),UNKNOWN
+200,Dieldrin,39381.0
+201,Dieldrin,UNKNOWN
+202,Dissolved oxygen (DO),UNKNOWN
+203,Disulfoton,82677.0
+204,Endosulfan sulfate,UNKNOWN
+205,Endrin,UNKNOWN
+206,Endrin aldehyde,UNKNOWN
+207,Endrin ketone,UNKNOWN
+208,Enterococcus,UNKNOWN
+209,Escherichia coli,UNKNOWN
+210,Ethalfluralin,82663.0
+211,Ethoprop,82672.0
+212,Europium,34857.0
+213,Fecal Coliform,UNKNOWN
+214,Fluoranthene,UNKNOWN
+215,Fluorene,UNKNOWN
+216,Fluorene-d10,UNKNOWN
+217,Fluorescence index,32312.0
+218,"Fluorescence, excitation 260 emission 450",32304.0
+219,"Fluorescence, excitation 275 emission 304",32305.0
+220,"Fluorescence, excitation 275 emission 340",32311.0
+221,"Fluorescence, excitation 280 emission 370",32310.0
+222,"Fluorescence, excitation 300 emission 390",32309.0
+223,"Fluorescence, excitation 340 emission 440",52901.0
+224,"Fluorescence, excitation 370 emission 460",52902.0
+225,"Fluorescence, excitation 390 emission 510",32307.0
+226,"Fluorescence, excitation 420 emission 460",32355.0
+227,Fonofos,4095.0
+228,Gallium,34862.0
+229,General observation (text),UNKNOWN
+230,Gold,34872.0
+231,"Grain size, clay (<0.005 MM) - Percent Passing",UNKNOWN
+232,"Grain size, coarse sand (>=630 to 2000 um)",UNKNOWN
+233,"Grain size, coarse silt (>=20 to 63 um)",UNKNOWN
+234,Heptachlor,UNKNOWN
+235,Heptachlor epoxide,UNKNOWN
+236,Hexachlorobenzene,UNKNOWN
+237,Holmium,34877.0
+238,Humification index,32313.0
+239,Hydrogen sulfide,UNKNOWN
+240,"Indeno[1,2,3-cd]pyrene",UNKNOWN
+241,Inorganic nitrogen (nitrate and nitrite),631.0
+242,Inorganic nitrogen (nitrate and nitrite) ***retired***use Nitrate + Nitrite,UNKNOWN
+243,"Inorganic nitrogen***retired***use Inorganic nitrogen (NO2, NO3, & NH3)",UNKNOWN
+244,Inorganic phosphorus,UNKNOWN
+245,Iron,34882.0
+246,Iron,UNKNOWN
+247,Lanthanum,34887.0
+248,Lead,34892.0
+249,Lead,UNKNOWN
+250,Length,UNKNOWN
+251,Light attenuation coefficient,70971.0
+252,Light attenuation coefficient,UNKNOWN
+253,"Light, photosynthetic active radiation (PAR)",UNKNOWN
+254,"Light, photosynthetic active radiation at depth (PAR)",UNKNOWN
+255,"Light, transmissivity",UNKNOWN
+256,Lindane,UNKNOWN
+257,Linuron,82666.0
+258,Lipids,UNKNOWN
+259,Lithium,34897.0
+260,Magnesium,34902.0
+261,Malathion,39532.0
+262,Manganese,34907.0
+263,Manganese,UNKNOWN
+264,Mercury,34912.0
+265,Mercury,UNKNOWN
+266,Methoxychlor,UNKNOWN
+267,Methyl parathion,82667.0
+268,Metolachlor,39415.0
+269,Metribuzin,82630.0
+270,Microcystin,UNKNOWN
+271,Mirex,UNKNOWN
+272,Moisture content,UNKNOWN
+273,Molinate,82671.0
+274,Molybdenum,34917.0
+275,Naphthalene,UNKNOWN
+276,Naphthalene-d8,UNKNOWN
+277,Napropamide,82684.0
+278,Neodymium,34922.0
+279,Nickel,34927.0
+280,Nickel,UNKNOWN
+281,Niobium,34932.0
+282,Nitrate,618.0
+283,Nitrate,71851.0
+284,Nitrate,UNKNOWN
+285,Nitrate + Nitrite,UNKNOWN
+286,Nitrite,613.0
+287,Nitrite,71856.0
+288,Nitrite,UNKNOWN
+289,Nitrogen,49570.0
+290,Nitrogen,UNKNOWN
+291,"Nitrogen, mixed forms (NH3), (NH4), organic, (NO2) and (NO3)",600.0
+292,"Nitrogen, mixed forms (NH3), (NH4), organic, (NO2) and (NO3)",62854.0
+293,"Nitrogen, mixed forms (NH3), (NH4), organic, (NO2) and (NO3)",UNKNOWN
+294,Oil and Grease,UNKNOWN
+295,Organic Nitrogen,607.0
+296,Organic carbon,681.0
+297,Organic carbon,UNKNOWN
+298,Orthophosphate,660.0
+299,Orthophosphate,671.0
+300,Orthophosphate,UNKNOWN
+301,Orthophosphate as PO4,UNKNOWN
+302,Oxadiazon,UNKNOWN
+303,Oxychlordane,UNKNOWN
+304,Oxygen,300.0
+305,Oxygen,301.0
+306,Oxygen,UNKNOWN
+307,PCB-128/167,UNKNOWN
+308,PCB-132/153,UNKNOWN
+309,PCB-170/190,UNKNOWN
+310,PCB-195/208,UNKNOWN
+311,PCB-5/8,UNKNOWN
+312,PCB-77/110,UNKNOWN
+313,PCB-90/101,UNKNOWN
+314,Parathion,39542.0
+315,"Particle size, Sieve No. 35, 32 Mesh, (0.5 mm)",UNKNOWN
+316,Pebulate,82669.0
+317,Pendimethalin,82683.0
+318,Percent Solids,UNKNOWN
+319,Perylene,UNKNOWN
+320,Phenanthrene,UNKNOWN
+321,Phenanthrene-d10,UNKNOWN
+322,Pheophytin a,32738.0
+323,Pheophytin a,62360.0
+324,Pheophytin a,UNKNOWN
+325,Phorate,82664.0
+326,Phosphate-phosphorus,UNKNOWN
+327,Phosphorus,34937.0
+328,Phosphorus,666.0
+329,Phosphorus,UNKNOWN
+330,Phytane,UNKNOWN
+331,Plastics,UNKNOWN
+332,Potassium,34942.0
+333,Pristane,UNKNOWN
+334,Prometon,4037.0
+335,Pronamide,82676.0
+336,Propachlor,4024.0
+337,Propanil,82679.0
+338,Propargite,82685.0
+339,Pyrene,UNKNOWN
+340,S-Ethyl dipropylthiocarbamate,82668.0
+341,Salinity,480.0
+342,Salinity,UNKNOWN
+343,Sand,UNKNOWN
+344,Scandium,34947.0
+345,Sediment,91157.0
+346,Sediment,91158.0
+347,Sediment,91159.0
+348,Sediment,91166.0
+349,Selenium,34952.0
+350,Selenium,UNKNOWN
+351,Silica,955.0
+352,Silicate,UNKNOWN
+353,Silt,UNKNOWN
+354,Silver,34957.0
+355,Silver,UNKNOWN
+356,Simazine,4035.0
+357,Small Gravel 2 - 4 mm,UNKNOWN
+358,Sodium,34962.0
+359,Specific conductance,90095.0
+360,Specific conductance,95.0
+361,Specific conductance,UNKNOWN
+362,Strontium,34967.0
+363,Substrate - clay/fine partic. org. matt.,UNKNOWN
+364,"Substrate - silt, fine",UNKNOWN
+365,Sulfide,UNKNOWN
+366,Sulfur,UNKNOWN
+367,Survival,UNKNOWN
+368,Suspended Sediment Concentration (SSC),70331.0
+369,Suspended Sediment Concentration (SSC),80154.0
+370,Suspended Sediment Concentration (SSC),UNKNOWN
+371,Tantalum,34977.0
+372,Tebuthiuron,82670.0
+373,Temperature,UNKNOWN
+374,"Temperature, water",10.0
+375,"Temperature, water",UNKNOWN
+376,Terbacil,82665.0
+377,Terbufos,82675.0
+378,Terbuthylazine,91064.0
+379,Tetrachloro-m-xylene,UNKNOWN
+380,Thiobencarb,82681.0
+381,Thorium-232,34982.0
+382,Tide stage (choice list),UNKNOWN
+383,Tin,34987.0
+384,Tin,UNKNOWN
+385,Titanium,34992.0
+386,Total Coliform,UNKNOWN
+387,"Total Nitrogen, mixed forms",UNKNOWN
+388,Total Particulate Organic Carbon,UNKNOWN
+389,"Total Phosphorus, mixed forms",UNKNOWN
+390,Total solids,UNKNOWN
+391,Total suspended solids,UNKNOWN
+392,Toxaphene,UNKNOWN
+393,Toxicity sediment survival,UNKNOWN
+394,Triallate,82678.0
+395,Trifluralin,82661.0
+396,Trimethylnaphthalene,UNKNOWN
+397,Triphenyl phosphate,UNKNOWN
+398,UV 254,50624.0
+399,UV 254,63162.0
+400,Uranium,35002.0
+401,Urea,UNKNOWN
+402,Vanadium,35007.0
+403,Vanadium,UNKNOWN
+404,Wave height,UNKNOWN
+405,Weight,UNKNOWN
+406,Wind velocity,UNKNOWN
+407,Ytterbium,35017.0
+408,Yttrium,35012.0
+409,Zinc,35022.0
+410,Zinc,UNKNOWN
+411,cis-Chlordane,UNKNOWN
+412,cis-Nonachlor,UNKNOWN
+413,gamma-HCH (Lindane),39341.0
+414,"o,p'-DDD",UNKNOWN
+415,"o,p'-DDE",UNKNOWN
+416,"o,p'-DDT",UNKNOWN
+417,"p,p'-DDD",UNKNOWN
+418,"p,p'-DDE",34653.0
+419,"p,p'-DDE",UNKNOWN
+420,"p,p'-DDT",UNKNOWN
+421,p-Terphenyl-d14,UNKNOWN
+422,pH,400.0
+423,pH,UNKNOWN
+424,trans-Chlordane,UNKNOWN
+425,trans-Nonachlor,UNKNOWN
