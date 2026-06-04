@@ -254,9 +254,14 @@ pip install -r requirements.txt
 
 #### Step 1: Prepare Raw Data
 
-Download data from the [Water Quality Portal](https://www.waterqualitydata.us/) filtered for HUC12: 180500021002. Place the following files in `data_raw/`:
+Download data from the [Water Quality Portal](https://www.waterqualitydata.us/) filtered for HUC12: 180500021002.
+Alternatively, access the links directly from their API:
+- https://www.waterqualitydata.us/data/Station/search?huc=180500021002&mimeType=csv
+- https://www.waterqualitydata.us/data/Activity/search?huc=180500021002&mimeType=csv
+- https://www.waterqualitydata.us/data/Result/search?huc=180500021002&mimeType=csv
+ 
+ Place the following files in `data_raw/`:
 - `activity.csv`
-- `characteristic.csv`
 - `result.csv`
 - `station.csv`
 
