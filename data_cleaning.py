@@ -111,7 +111,7 @@ activity['activity_depth_unit'].unique()
 # Convert depth column to numeric
 activity['activity_depth'] = pd.to_numeric(activity['activity_depth'], errors='coerce')
 
-#%% 
+#%%
 # Count negative values
 (activity['activity_depth'] < 0).sum()
 
